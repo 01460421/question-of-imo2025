@@ -377,7 +377,7 @@ class GameEngine {
     switch (this.bazzaStyle.id) {
       case 'conservative': return { move: Math.min(capacity * 0.3, 0.5), reason: '保守策略' };
       case 'aggressive': return { move: Math.min(capacity * 0.9, theoreticalMax * 0.9), reason: '激進策略' };
-      case 'balanced': return { move: Math.min(capacity * 0.7, 0.7), reason: '平衡策略' };
+      case 'balanced': return { move: Math.min(capacity * 0.7), reason: '平衡策略' };
       case 'adaptive': {
         const aliceMoves = moves.filter((_, i) => i % 2 === 0);
         const aliceNonZero = aliceMoves.filter(m => m > 0.1);
